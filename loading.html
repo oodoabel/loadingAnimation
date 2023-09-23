@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>loadingAnimation</title>
+    <style>
+      .alldiv{
+        width: 250px;
+        aspect-ratio: 1;
+        position: relative;
+      }
+      .ring1, .ring2{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+        background-color: transparent;
+        animation: scale 800ms infinite;
+
+      }
+      .ring2 {
+        animation-delay: 400ms;
+      }
+      body{
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+      @keyframes scale{
+        from{
+          transform: scale(0.2);
+          opacity: 1;
+        }
+        to{
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alldiv">
+      <div class="ring1"></div>
+      <div class="ring2"></div>
+    </div>
+  </body>
+</html>
